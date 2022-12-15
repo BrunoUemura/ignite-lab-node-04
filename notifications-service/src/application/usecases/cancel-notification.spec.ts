@@ -32,10 +32,12 @@ describe('Cacncel notification', () => {
       notificationsRepository,
     );
 
-    expect(() => {
+    const operation = () => {
       return cacncelNotification.execute({
         notificationId: 'fake-notification-id',
       });
-    }).rejects.toThrow(NotificationNotFoundError);
+    };
+
+    expect(operation).rejects.toThrow(NotificationNotFoundError);
   });
 });

@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
 
-import { Notification } from '../entities/notification';
-import { Content } from '../entities/notification-content';
 import { NotificationsRepository } from '../repositories/notifications-repository';
 import { NotificationNotFoundError } from './errors/notification-not-found-error';
 
